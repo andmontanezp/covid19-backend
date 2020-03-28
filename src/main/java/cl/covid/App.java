@@ -9,8 +9,7 @@ import org.springframework.web.reactive.config.EnableWebFlux;
  *
  */
 @SpringBootApplication
-@EnableWebFlux
-public class App 
+public class App
 {
     public static void main( String[] args ) {
         SpringApplication.run(App.class, args);

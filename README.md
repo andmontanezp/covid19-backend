@@ -1,2 +1,1 @@
-# assembler07-gmail.com
-covid19-backend
+# covid19-backend

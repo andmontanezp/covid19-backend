@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.List;
+
 @Service
 public class CountryDasboardService {
 
@@ -16,7 +18,7 @@ public class CountryDasboardService {
         this.covidClient = covidClient;
     }
 
-    public Mono<CountriesStatResponse> getCountriesData() {
-        return this.covidClient.getCasesByCountry();
+    public Mono<List<CountriesStat>> getCountriesData() {
+        return this.covidClient.getCasesByCountry().map(CountriesStatResponse::getCountries_stat);
     }
 }
